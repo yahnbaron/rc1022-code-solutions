@@ -8,7 +8,7 @@ button:hover {
   background-color: aqua;
 }
 
-tr:nth-child(even) {
+tbody tr:nth-child(odd) {
   background-color: lightgray;
 }
 
