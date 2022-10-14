@@ -1,0 +1,50 @@
+body {
+  color: rgb(233 233 233);
+  font-family: Lato, sans-serif;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #1996da;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-third {
+  flex-basis: calc(100 % 3);
+  padding: 15px;
+}
+
+h2 {
+  padding-top: 25px;
+  font-size: 1.25rem;
+  line-height: 50%;
+}
+
+img {
+  max-width: 75px;
+  padding: 15px;
+}
+
+p {
+  font-size: 0.5rem;
+  font-weight: thin;
+  line-height: 150%;
+}
+
+.white-back {
+  background-color: white;
+  width: 80px;
+  margin: auto;
+  border-radius: 50%;
+}
