@@ -25,13 +25,12 @@
 }
 
 .column-tenth {
-  flex-basis: 10%;
+  flex-basis: auto;
 }
 
 .footer-text {
   font-family: Avenir, sans-serif;
-  margin-left: 40px;
-  font-size: 1rem;
+  font-size: 0.6rem;
 }
 
 .inline {
@@ -90,4 +89,24 @@ a:hover {
 
 .lower-nav {
   font-size: 10px;
+}
+
+.column-auto {
+  flex-basis: auto;
+}
+
+.gray-links {
+  color: #525351;
+}
+
+.gray-links:visited {
+  color: #525351, white;
+}
+
+.thinner-pads {
+  padding: 20px 50px;
+}
+
+.gap {
+  gap: 20px;
 }
