@@ -101,6 +101,7 @@ a:hover {
 
 .gray-links:visited {
   color: #525351;
+  text-decoration: none;
 }
 
 .thinner-pads {
@@ -109,4 +110,34 @@ a:hover {
 
 .gap {
   gap: 20px;
+}
+
+.apart {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.other-font {
+  font-family: "Tiempos Headline", serif;
+  font-weight: lighter;
+}
+
+.text-shrink {
+  font-size: 60%;
+}
+
+.avenir {
+  font-family: Avenir, sans-serif;
+}
+
+button.get-started {
+  background-color: #284464;
+  padding: 10px 30px;
+  border: 0;
+  border-radius: 5%;
+}
+
+button {
+  font-family: Avenir, sans-serif;
+  color: #ebeef1;
 }
