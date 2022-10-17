@@ -13,7 +13,7 @@
 }
 
 .column-eighty {
-  flex-basis: 80%;
+  flex-basis: 90%;
 }
 
 .column-half {
@@ -168,4 +168,43 @@ h3 {
 .extra-bottom-pad {
   padding-bottom: 50px;
   border-bottom: 1px #edeef0 solid;
+}
+
+.center-justify {
+  justify-content: center;
+}
+
+#hero {
+  background-image: url("images/hero.jpg");
+  margin: 50px auto;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-header {
+  margin-left: 50px;
+  margin-top: 50px;
+  font-family: "Tiempos Headline", serif;
+  font-size: 25px;
+  color: white;
+  min-height: 300px;
+}
+
+.overlay {
+  background-color: rgb(68 68 68 / 40.8%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hero-text {
+  position: absolute;
+  font-family: Avenir, sans-serif;
+  font-weight: lighter;
+  font-size: 11px;
+  top: 110px;
+  color: #f6f6f6;
+  left: 50px;
 }
