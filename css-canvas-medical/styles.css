@@ -30,7 +30,7 @@
 
 .footer-text {
   font-family: Avenir, sans-serif;
-  font-size: 0.6rem;
+  font-size: 0.75rem;
 }
 
 .inline {
@@ -67,7 +67,7 @@ a:hover {
 }
 
 .thick-pads {
-  padding: 50px;
+  padding: 75px;
 }
 
 .small-logo {
@@ -82,13 +82,13 @@ a:hover {
 }
 
 .tiny-text {
-  font-size: 8px;
-  line-height: 0.9rem;
+  font-size: 10px;
+  line-height: 1rem;
   color: #f5f5f5;
 }
 
 .lower-nav {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .column-auto {
@@ -176,7 +176,7 @@ h3 {
 
 #hero {
   background-image: url("images/hero.jpg");
-  margin: 50px auto;
+  margin: 45px auto;
   background-size: cover;
   position: relative;
 }
@@ -186,6 +186,7 @@ h3 {
   margin-top: 50px;
   font-family: "Tiempos Headline", serif;
   font-size: 25px;
+  font-weight: 100;
   color: white;
   min-height: 300px;
 }
@@ -202,9 +203,42 @@ h3 {
 .hero-text {
   position: absolute;
   font-family: Avenir, sans-serif;
-  font-weight: lighter;
+  font-weight: normalm;
   font-size: 11px;
   top: 110px;
   color: #f6f6f6;
   left: 50px;
+  line-height: 1rem;
+}
+
+.inside-hero {
+  position: relative;
+  bottom: 100px;
+  left: 50px;
+}
+
+.navbar {
+  border-bottom: 1px #e7e9ec solid;
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
+
+.toplogo {
+  max-height: 20px;
+  padding-left: 40px;
+}
+
+.navtext {
+  font-family: Avenir, sans-serif;
+  color: #a0a0a0;
+  font-size: 12px;
+}
+
+.contactbutton {
+  margin-right: 40px;
+  background-color: #284464;
+  padding: 8px;
+  font-size: 12px;
+  border: 0;
+  border-radius: 5%;
 }
