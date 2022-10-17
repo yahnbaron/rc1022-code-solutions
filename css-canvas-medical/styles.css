@@ -1,0 +1,244 @@
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-eighty {
+  flex-basis: 90%;
+}
+
+.column-half {
+  flex-basis: 50%;
+}
+
+.column-quarter {
+  flex-basis: 25%;
+}
+
+.column-tenth {
+  flex-basis: auto;
+}
+
+.footer-text {
+  font-family: Avenir, sans-serif;
+  font-size: 0.75rem;
+}
+
+.inline {
+  display: inline;
+}
+
+.gray-text {
+  color: #707070;
+}
+
+.block {
+  display: block;
+}
+
+.gray-back {
+  background-color: #525351;
+}
+
+.light-gray-back {
+  background-color: #fafafa;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.thick-pads {
+  padding: 75px;
+}
+
+.small-logo {
+  max-width: 80px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.white-text {
+  color: white;
+  font-family: Avenir, sans-serif;
+}
+
+.tiny-text {
+  font-size: 10px;
+  line-height: 1rem;
+  color: #f5f5f5;
+}
+
+.lower-nav {
+  font-size: 12px;
+}
+
+.column-auto {
+  flex-basis: auto;
+}
+
+.gray-links {
+  color: #525351;
+}
+
+.gray-links:visited {
+  color: #525351;
+  text-decoration: none;
+}
+
+.thinner-pads {
+  padding: 20px 50px 10px;
+}
+
+.gap {
+  gap: 20px;
+}
+
+.apart {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.other-font {
+  font-family: "Tiempos Headline", serif;
+  font-weight: lighter;
+}
+
+.text-shrink {
+  font-size: 60%;
+}
+
+.avenir {
+  font-family: Avenir, sans-serif;
+}
+
+button.get-started {
+  background-color: #284464;
+  padding: 10px 30px;
+  border: 0;
+  border-radius: 5%;
+}
+
+button {
+  font-family: Avenir, sans-serif;
+  color: #ebeef1;
+}
+
+.centered {
+  justify-content: center;
+  text-align: center;
+}
+
+h3 {
+  font-size: larger;
+  margin-bottom: 0;
+}
+
+.pcps {
+  text-align: center;
+  font-size: 12px;
+  font-family: Avenir, sans-serif;
+}
+
+.locations {
+  font-family: Avenir, sans-serif;
+  text-align: center;
+  font-size: 14px;
+  line-height: 35px;
+}
+
+.extra-bottom-pad {
+  padding-bottom: 50px;
+  border-bottom: 1px #edeef0 solid;
+}
+
+.center-justify {
+  justify-content: center;
+}
+
+#hero {
+  background-image: url("images/hero.jpg");
+  margin: 45px auto;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-header {
+  margin-left: 50px;
+  margin-top: 50px;
+  font-family: "Tiempos Headline", serif;
+  font-size: 25px;
+  font-weight: 100;
+  color: white;
+  min-height: 300px;
+}
+
+.overlay {
+  background-color: rgb(68 68 68 / 40.8%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hero-text {
+  position: absolute;
+  font-family: Avenir, sans-serif;
+  font-weight: normalm;
+  font-size: 11px;
+  top: 110px;
+  color: #f6f6f6;
+  left: 50px;
+  line-height: 1rem;
+}
+
+.inside-hero {
+  position: relative;
+  bottom: 100px;
+  left: 50px;
+}
+
+.navbar {
+  border-bottom: 1px #e7e9ec solid;
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
+
+.toplogo {
+  max-height: 20px;
+  padding-left: 40px;
+}
+
+.navtext {
+  font-family: Avenir, sans-serif;
+  color: #a0a0a0;
+  font-size: 12px;
+}
+
+.contactbutton {
+  margin-right: 40px;
+  background-color: #284464;
+  padding: 8px;
+  font-size: 12px;
+  border: 0;
+  border-radius: 5%;
+}
