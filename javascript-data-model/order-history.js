@@ -11,14 +11,16 @@ var orderHistory = [
         productName: 'The Art of SQL',
         author: 'Faroult, Stephanie',
         returnWindow: '08/04/2020',
-        itemCost: 33.99
+        itemCost: 33.99,
+        picURL: 'images/faroult-sql.png'
       },
       {
         category: 'tech',
         productName: 'GameCube Controller - Super Smash Bros. Edition for Switch',
         author: null,
         returnWindow: '08/04/2020',
-        itemCost: 94.95
+        itemCost: 94.95,
+        picURL: 'images/switchgccontroller.png'
       }
     ]
   },
@@ -34,7 +36,8 @@ var orderHistory = [
         productName: 'Gamecube Controller Adapter Specifically Designed For Online Piracy',
         author: null,
         returnWindow: '08/05/2020',
-        itemCost: 15.98
+        itemCost: 15.98,
+        picURL: 'images/chinagcadapter.png'
       }
     ]
   },
@@ -50,7 +53,8 @@ var orderHistory = [
         productName: 'The Timeless Way of Building',
         author: 'Alexander, Christopher',
         returnWindow: '08/19/2020',
-        itemCost: 41.33
+        itemCost: 41.33,
+        picURL: 'alexanderbuilding.png'
       }
     ]
   },
@@ -66,7 +70,8 @@ var orderHistory = [
         productName: 'JavaScript for impatient programmers',
         author: 'Rauschmayer, Dr. Axel',
         returnWindow: '09/07/2020',
-        itemCost: 31.55
+        itemCost: 31.55,
+        picURL: 'Rauschmayerjavascript.png'
       }
     ]
   }
