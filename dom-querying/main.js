@@ -1,0 +1,12 @@
+console.log('ayy lmao');
+var hOne = document.querySelector('h1');
+console.log(hOne);
+console.dir(hOne);
+var idExp = document.querySelector('#explanation');
+console.dir(idExp);
+var hint = document.querySelector('.hint');
+console.dir(hint);
+var pNodeList = document.querySelectorAll('p');
+console.dir(pNodeList);
+var exLinkClasses = document.querySelectorAll('.example-link');
+console.dir(exLinkClasses);
