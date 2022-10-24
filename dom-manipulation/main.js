@@ -5,19 +5,17 @@ var clickCountLoc = document.querySelector('.click-count');
 function handleClick(event) {
   clickTimes++;
   clickCountLoc.textContent = 'Clicks: ' + clickTimes;
-  if (clickTimes > 3) {
+  if (clickTimes < 4) {
+    hotButLoc.className = 'hot-button cold';
+  } else if (clickTimes < 7) {
     hotButLoc.className = 'hot-button cool';
-  }
-  if (clickTimes > 6) {
+  } else if (clickTimes < 10) {
     hotButLoc.className = 'hot-button tepid';
-  }
-  if (clickTimes > 9) {
+  } else if (clickTimes < 13) {
     hotButLoc.className = 'hot-button warm';
-  }
-  if (clickTimes > 12) {
+  } else if (clickTimes < 16) {
     hotButLoc.className = 'hot-button hot';
-  }
-  if (clickTimes > 16) {
+  } else {
     hotButLoc.className = 'hot-button nuclear';
   }
 }
