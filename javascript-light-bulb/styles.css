@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+}
+
+.container-on {
+  background-color: #fef9f1;
+}
+
+.row {
+  display: flex;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+}
+
+.column-20 {
+  flex-basis: 20%;
+}
+
+.bulb {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 0;
+}
+
+.bulb-on {
+  background-color: #faea84;
+  box-shadow: 10px 10px 30px rgb(218 211 10 / 34%);
+}
+
+.container-off {
+  background-color: #111;
+}
+
+.bulb-off {
+  background-color: #252525;
+  box-shadow: 10px 10px 30px rgb(36 36 36 / 34%);
+}
