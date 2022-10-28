@@ -1,4 +1,8 @@
 /* exported lastChars */
+/* determine if given length arg is longer than string length, return whole string
+   determne start point as string length minus desired length
+   loop through string at starting point through string length, pushing each value to newString  */
+
 function lastChars(length, string) {
   var retString = '';
   var smartLength = 0;
@@ -8,8 +12,8 @@ function lastChars(length, string) {
     smartLength = length;
   }
 
-  var remainder = (string.length - smartLength);
-  for (var i = remainder; i < smartLength; i++) {
+  var startingPoint = (string.length - smartLength);
+  for (var i = startingPoint; i < string.length; i++) {
     retString += string[i];
   }
   return retString;
