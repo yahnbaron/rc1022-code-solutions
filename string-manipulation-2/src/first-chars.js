@@ -1,4 +1,7 @@
-/* exported firstChars */
+/* exported firstChars
+  make a return string, and then check which given arg has a higher length
+  loop through each letter of the string and add it to the return string
+*/
 function firstChars(length, string) {
   var retString = '';
   var smartLength = 0;

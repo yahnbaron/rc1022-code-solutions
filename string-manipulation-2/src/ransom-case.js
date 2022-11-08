@@ -1,4 +1,6 @@
-/* exported ransomCase */
+/* exported ransomCase
+  create lowercase version of given string, then capitalize every other word and concatenate it to the return string
+*/
 function ransomCase(string) {
   var lowString = string.toLowerCase();
   var returnString = lowString[0];

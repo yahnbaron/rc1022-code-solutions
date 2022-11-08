@@ -1,7 +1,7 @@
 /* exported lastChars */
-/* determine if given length arg is longer than string length, return whole string
+/* determine if given length arg is longer than string length
    determne start point as string length minus desired length
-   loop through string at starting point through string length, pushing each value to newString  */
+   loop through string at starting point through string length, pushing each value to retString  */
 
 function lastChars(length, string) {
   var retString = '';

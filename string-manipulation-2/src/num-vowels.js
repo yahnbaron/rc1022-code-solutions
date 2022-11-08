@@ -1,4 +1,6 @@
-/* exported numVowels */
+/* exported numVowels
+  check and add to tally if any letter of the string is a vowel, then return tally
+*/
 function numVowels(string) {
   var vowCount = 0;
   for (var i = 0; i < string.length; i++) {
