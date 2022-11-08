@@ -25,19 +25,15 @@ Account.prototype.withdraw = function (amount) {
 
 Account.prototype.getBalance = function () {
   var tally = 0;
-  if (this.transactions.length === 0) {
-    return tally;
-  } else {
-    var totalDeposits = 0;
-    var totalWithdrawals = 0;
-    for (var i = 0; i < this.transactions.length; i++) {
-      if (this.transactions[i].type === 'deposit') {
-        totalDeposits += this.transactions[i].amount;
-      } else {
-        totalWithdrawals += this.transactions[i].amount;
-      }
+  var totalDeposits = 0;
+  var totalWithdrawals = 0;
+  for (var i = 0; i < this.transactions.length; i++) {
+    if (this.transactions[i].type === 'deposit') {
+      totalDeposits += this.transactions[i].amount;
+    } else {
+      totalWithdrawals += this.transactions[i].amount;
     }
-    tally = totalDeposits - totalWithdrawals;
-    return tally;
   }
+  tally = totalDeposits - totalWithdrawals;
+  return tally;
 };
