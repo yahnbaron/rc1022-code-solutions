@@ -1,1 +1,3 @@
-/* exported isAnagram */
+/* exported isAnagram
+  Create new
+*/
