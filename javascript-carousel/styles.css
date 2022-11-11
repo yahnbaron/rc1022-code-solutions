@@ -61,6 +61,7 @@ img {
   padding: 20px;
 }
 
-i {
+i,
+span {
   margin: auto 10px;
 }

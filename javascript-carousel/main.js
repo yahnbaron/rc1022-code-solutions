@@ -16,34 +16,18 @@ var pics = [
   'images/039.png'
 ];
 var intervalId = setInterval(rotate, 3000);
+var ballNodes = document.querySelectorAll('span');
 
 function rotate() {
   ballClear();
   whereWeAt++;
+  if (whereWeAt < 0 || whereWeAt > 4) {
+    whereWeAt = 0;
+  }
   clearInterval(intervalId);
   intervalId = setInterval(rotate, 3000);
   $image.setAttribute('src', pics[whereWeAt]);
-  if (whereWeAt === 0) {
-    cir0.className = 'fa-solid circle0 fa-circle';
-    cir4.className = 'fa-solid circle4 fa-o';
-  } else if (whereWeAt === 1) {
-    cir1.className = 'fa-solid circle1 fa-circle';
-    cir0.className = 'fa-solid circle0 fa-o';
-  } else if (whereWeAt === 2) {
-    cir2.className = 'fa-solid circle2 fa-circle';
-    cir1.className = 'fa-solid circle1 fa-o';
-  } else if (whereWeAt === 3) {
-    cir3.className = 'fa-solid circle3 fa-circle';
-    cir2.className = 'fa-solid circle2 fa-o';
-  } else if (whereWeAt === 4) {
-    cir4.className = 'fa-solid circle4 fa-circle';
-    cir3.className = 'fa-solid circle3 fa-o';
-  } else {
-    whereWeAt = 0;
-    cir0.className = 'fa-solid circle0 fa-circle';
-    cir4.className = 'fa-solid circle4 fa-o';
-    $image.setAttribute('src', pics[whereWeAt]);
-  }
+  ballNodes[whereWeAt].className = 'fa-solid circle0 fa-circle';
 }
 
 function ballClear() {
