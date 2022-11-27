@@ -15,13 +15,10 @@ function isAnagram(firstString, secondString) {
       noSpaceTwo += secondString[i];
     }
   }
-  if (noSpaceOne.length !== noSpaceTwo.length) {
+  noSpaceOne = noSpaceOne.split('').sort().join('');
+  noSpaceTwo = noSpaceTwo.split('').sort().join('');
+  if (noSpaceOne !== noSpaceTwo) {
     return false;
-  }
-  for (i = 0; i < noSpaceOne.length; i++) {
-    if (!(noSpaceOne.includes(noSpaceTwo[i]))) {
-      return false;
-    }
   }
   return true;
 }
