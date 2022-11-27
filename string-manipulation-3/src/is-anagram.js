@@ -1,6 +1,5 @@
 /* exported isAnagram
-  Create new strings without spaces, then compare the length comparing false if different
-  for every digit in first spaceless string, check if second includes it
+  Create new strings without spaces, then sort them and compare if equal
 */
 function isAnagram(firstString, secondString) {
   var noSpaceOne = '';
