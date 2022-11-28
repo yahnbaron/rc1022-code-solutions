@@ -8,7 +8,6 @@
   then we calculate score by looping through each player andadding the real value of their cards together
   and update the value of their score to the sum. Finally, we make the whoWon function
 */
-console.log('here we go');
 var deck = [];
 var indices = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
 var suits = ['Spades', 'Hearts', 'Diamonds', 'Clubs'];
@@ -108,4 +107,3 @@ shuffle();
 deal();
 calcScore();
 whoWon();
-console.log('here we go');
