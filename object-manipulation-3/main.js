@@ -56,13 +56,23 @@ function createDeck() {
     }
   }
 }
-
+/*
 function shuffle() {
   for (var i = deck.lenth - 1; i > 0; i--) {
     var y = Math.floor(Math.random() * i);
     var temp = deck[i];
     deck[i] = deck[y];
     deck[y] = temp;
+  }
+}
+*/
+function shuffle() {
+  for (var i = 0; i < 52; i++) {
+    var randCard = Math.floor((Math.random() * deck.length));
+    var randCard2 = Math.floor((Math.random() * deck.length));
+    var temp = deck[randCard];
+    deck[randCard] = deck[randCard2];
+    deck[randCard2] = temp;
   }
 }
 
