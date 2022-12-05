@@ -5,4 +5,5 @@ app.use(function (req, res) {
   res.send('howdy');
 });
 
-app.listen(3000, () => process.stdout('Listening on port 3000!'));
+// eslint-disable-next-line no-console
+app.listen(3000, () => console.log('Listening on port 3000!'));
