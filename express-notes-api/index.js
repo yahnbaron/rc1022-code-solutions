@@ -1,7 +1,7 @@
+const fs = require('fs');
 const express = require('express');
 const data = require('./data.json');
 const app = express();
-
 const json = express.json();
 app.use(json);
 
@@ -38,13 +38,19 @@ app.post('/api/notes', (req, res) => {
     res.status(201);
     req.body.Id = data.nextId;
     data.notes[data.nextId] = req.body;
-    if (!data.notes[data.nextId]) {
-      res.status(500);
-      const noWriteErr = { error: 'An unexpected error occurred.' };
-      res.send(noWriteErr);
-    }
     data.nextId++;
-    res.json(req.body);
+    const stringified = JSON.stringify(data, null, 2);
+    const noWriteErr = { error: 'An unexpected error occurred.' };
+    fs.writeFile('data.json', stringified, 'utf-8', err => {
+      if (err) {
+        res.status(500);
+        console.error(err);
+        res.json(noWriteErr);
+      } else {
+        res.status(200);
+        res.json(req.body);
+      }
+    });
   }
 });
 
@@ -61,7 +67,17 @@ app.delete('/api/notes/:id', (req, res) => {
     res.send(notThereErr);
   } else {
     delete data[req.params.id];
-    res.sendStatus(204);
+    const stringified = JSON.stringify(data, null, 2);
+    const noWriteErr = { error: 'An unexpected error occurred.' };
+    fs.writeFile('data.json', stringified, 'utf-8', err => {
+      if (err) {
+        res.status(500);
+        console.error(err);
+        res.json(noWriteErr);
+      } else {
+        res.sendStatus(204);
+      }
+    });
   }
 });
 
@@ -79,7 +95,17 @@ app.put('/api/notes/:id', (req, res) => {
   } else {
     req.body.id = idNumber;
     data.notes[idNumber] = req.body;
-    res.sendStatus(204);
+    const stringified = JSON.stringify(data, null, 2);
+    const noWriteErr = { error: 'An unexpected error occurred.' };
+    fs.writeFile('data.json', stringified, 'utf-8', err => {
+      if (err) {
+        res.status(500);
+        console.error(err);
+        res.json(noWriteErr);
+      } else {
+        res.sendStatus(204);
+      }
+    });
   }
 });
 
