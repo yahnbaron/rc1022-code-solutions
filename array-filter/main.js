@@ -13,3 +13,4 @@ const names = [
 ];
 
 const evenNumbers = numbers.filter(numbers => numbers % 2 === 0);
+const overFive = numbers.filter(numbers => numbers > 5);
