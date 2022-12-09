@@ -14,3 +14,5 @@ const names = [
 
 const evenNumbers = numbers.filter(numbers => numbers % 2 === 0);
 const overFive = numbers.filter(numbers => numbers > 5);
+const startWithE = names.filter(names => names[0] === 'E');
+const haveD = names.filter(names => names.includes('d') || names.includes('D'));
