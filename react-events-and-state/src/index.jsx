@@ -9,7 +9,11 @@ class CustomButton extends React.Component {
   }
 
   handleClick() {
-    this.setState({ isClicked: true });
+    if (this.state.isClicked) {
+      this.setState({ isClicked: false });
+    } else {
+      this.setState({ isClicked: true });
+    }
   }
 
   render() {
