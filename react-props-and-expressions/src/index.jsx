@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 function CustomButton(props) {
-  return <button>props.txt</button>;
+  return <button>{props.text}</button>;
 }
 const element = (
   <div>
