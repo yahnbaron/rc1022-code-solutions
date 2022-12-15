@@ -4,7 +4,7 @@ export default class ToggleSwitch extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
-    this.state = { isOn: true };
+    this.state = { isOn: false };
   }
 
   handleClick() {
