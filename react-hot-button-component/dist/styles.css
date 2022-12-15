@@ -1,0 +1,34 @@
+button {
+  padding: 10px 20px;
+  border: 3px solid black;
+}
+
+.freezing {
+  background-color: #351c75;
+  color: white;
+}
+
+.cold {
+  background-color: #674ea7;
+  color: white;
+}
+
+.cool {
+  background-color: #e06666;
+  color: white;
+}
+
+.warm {
+  background-color: #f6b26b;
+  color: black;
+}
+
+.hot {
+  background-color: #ff0;
+  color: black;
+}
+
+.fusion {
+  background-color: white;
+  color: black;
+}
