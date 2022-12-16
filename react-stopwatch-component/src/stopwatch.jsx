@@ -1,43 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-export default class Stopwatch extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-    this.state = {
-      counter: 0,
-      isCounting: false,
-      intervalId: 0
-    };
-  }
+function Stopwatch() {
+  const [isRunning, setIsRunning] = useState(false);
+  const [seconds, setSeconds] = useState(0);
 
-  handleClick() {
-    if (this.state.isOn) {
-      this.setState({ isOn: false });
-    } else {
-      this.setState({ isOn: true });
+  useEffect(() => {
+    let interval;
+    if (isRunning) {
+      interval = setInterval(() => {
+        setSeconds(seconds => seconds + 1);
+      }, 1000);
+    } else if (!isRunning && seconds !== 0) {
+      clearInterval(interval);
     }
+    return () => clearInterval(interval);
+  }, [isRunning, seconds]);
+
+  function handleStartStop() {
+    setIsRunning(!isRunning);
   }
 
-  render() {
-    if (this.state.isCounting) {
-      return (
-        <div>
-          <div className="circle">
-            <p className="counter">{this.state.counter}</p>
-          </div>
-          <i className="fa-solid fa-pause" onClick={this.handleButtonClick}></i>
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          <div className="circle">
-            <p className="counter">{this.state.counter}</p>
-          </div>
-          <i className="fa-solid fa-play" onClick={this.handleButtonClick}></i>
-        </div>
-      );
-    }
+  function handleReset() {
+    setSeconds(0);
+    setIsRunning(false);
   }
+
+  return (
+    <div>
+      <h1>Stopwatch: {seconds} seconds</h1>
+      <button onClick={handleStartStop}>
+        {isRunning ? 'Stop' : 'Start'}
+      </button>
+      <button onClick={handleReset}>Reset</button>
+    </div>
+  );
 }
+
+export default Stopwatch;
