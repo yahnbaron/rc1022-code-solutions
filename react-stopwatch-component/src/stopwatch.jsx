@@ -25,13 +25,15 @@ function Stopwatch() {
     setIsRunning(false);
   }
 
+  const pause = <i className="fa-solid fa-pause"></i>;
+  const play = <i className="fa-solid fa-play"></i>;
+
   return (
     <div>
-      <h1>Stopwatch: {seconds} seconds</h1>
-      <button onClick={handleStartStop}>
-        {isRunning ? 'Stop' : 'Start'}
-      </button>
-      <button onClick={handleReset}>Reset</button>
+      <div className='round' onClick={!isRunning && handleReset}>{seconds}</div>
+      <div className='icon-holder' onClick={handleStartStop}>
+        {isRunning ? pause : play}
+      </div>
     </div>
   );
 }
