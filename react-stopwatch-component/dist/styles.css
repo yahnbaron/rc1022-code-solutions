@@ -1,0 +1,13 @@
+.round {
+  padding: 10px;
+  border: 2px solid black;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.icon-holder {
+  text-align: center;
+  max-width: 50px;
+}
