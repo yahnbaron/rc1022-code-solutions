@@ -1,0 +1,67 @@
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.col-auto {
+  flex-basis: auto;
+}
+
+.col-10 {
+  flex-basis: 10%;
+}
+
+.col-20 {
+  flex-basis: 20%;
+}
+
+.col-80 {
+  flex-basis: 80%;
+}
+
+.gallery {
+  border: 4px solid black;
+  border-bottom: none;
+}
+
+img {
+  max-height: 500px;
+  max-width: 500px;
+  padding: 5px;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+  font-size: 80px;
+  padding: 20px;
+}
+
+.fa-o,
+.fa-circle {
+  font-size: 28px;
+}
+
+.dots {
+  justify-content: center;
+  border: 4px solid black;
+  border-top: none;
+  padding: 20px;
+}
+
+i,
+span {
+  margin: auto 10px;
+}
