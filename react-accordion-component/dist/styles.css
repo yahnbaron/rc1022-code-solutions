@@ -1,0 +1,17 @@
+.outlined {
+  border: 2px solid black;
+  padding-left: 10px;
+}
+
+#root {
+  max-width: 600px;
+}
+
+.parent {
+  background-color: lightgray;
+}
+
+.child {
+  border: 2px solid black;
+  padding: 5px;
+}
