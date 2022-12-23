@@ -1,0 +1,39 @@
+Sign up:
+
+When a user submits the sign up form, a POST request is sent to the
+/api/auth/sign-up endpoint with the provided username and password in the request body.
+The server-side code in index.js receives the request and checks if the request body
+contains a username and password. If either is missing, it throws a ClientError with a status code of 400.
+If the request body has a username and password, the server hashes the password using the
+argon2 library and inserts a new user record into the database with the provided
+username and hashed password. It then returns the newly created user's ID, username, and creation timestamp in the response.
+
+Sign in:
+
+When a user submits the sign in form, a POST request is sent to the
+/api/auth/sign-in endpoint with the provided username and password in the request body.
+The server-side code in index.js receives the request and checks if the request body contains
+a username and password. If either is missing, it throws a ClientError with a status code of 401.
+If the request body has a username and password, the server queries the database for the user with
+the provided username and retrieves the hashed password for that user.
+The server then verifies the provided password against the retrieved hashed password using the argon2 library.
+If the passwords do not match, it throws a ClientError with a status code of 401.
+If the passwords match, the server creates a JSON web token (JWT) with the user's ID and username as the payload,
+using the jwt library and a secret specified in the TOKEN_SECRET environment variable. It returns the JWT and the user's
+ID and username in the response.
+In the client-side code, the App component receives the response and updates its state with the user's ID and username.
+It also stores the JWT in local storage.
+
+User can stay signed in:
+
+When the React app is rendered, the App component checks if there is a JWT in local storage. If there is, it decodes the
+JWT to get the user's ID and username, and updates its state with that information. This allows the user to stay signed in
+even if they refresh the page or close the browser.
+The App component also listens for changes to the URL hash and updates its state with the new route. This allows the user
+to navigate between pages while still being signed in.
+
+Sign out:
+
+When the user clicks the sign out button, the App component removes the JWT from local storage and updates its state to
+remove the user's ID and username. This triggers a re-render of the app, which displays the sign in page. The user is
+no longer signed in and will need to provide their credentials to access protected routes or resources.
